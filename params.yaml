@@ -75,7 +75,7 @@ PointNet++:
   max_neighbors: 64
   r: 0.1
 
-GKO:
+GNO:
   encoder: [6, 64, 64, 8]
   decoder: [8, 64, 64, 4]
   kernel: [8, 64, 64, 64, 64]
@@ -94,7 +94,7 @@ GKO:
   nb_epochs: 400
   lr: 0.003
 
-MGKO:
+MGNO:
   encoder: [6, 64, 64, 8]
   decoder: [8, 64, 64, 4]
   kernel: [8, 64, 64, 64, 64]
