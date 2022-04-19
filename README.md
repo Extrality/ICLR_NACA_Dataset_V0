@@ -1,5 +1,5 @@
 # ICLR_Preliminary_NACA_Dataset
-In this repository, you will find the different python scripts to train the available models on the 2D incompressible steady-state RAND solutions over NACA airfoils proposed at the Geometrical and Topological Representation Learning Workshop at ICLR 2022.
+In this repository, you will find the different python scripts to train the available models on the 2D incompressible steady-state RAND solutions over NACA airfoils proposed at the Geometrical and Topological Representation Learning Workshop at ICLR 2022. You canf ind the paper here.
 
 ## Requirements
 * Python 3.9.12
@@ -7,7 +7,6 @@ In this repository, you will find the different python scripts to train the avai
 * PyTorch Geometric 2.0.4
 * PyVista 0.33.3
 * Seaborn 0.11.2
-* PyYAML 6.0
 
 ## Training
 To train a model, run main.py with the desired model architecture:
@@ -34,3 +33,4 @@ optional arguments:
  ```
  
  ## Results
+The different results for each are given in the ```metrics``` folder and are displayed under the form of a table in the original paper.
