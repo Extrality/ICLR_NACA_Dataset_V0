@@ -1,5 +1,5 @@
-# ICLR_Preliminary_NACA_Dataset
-In this repository, you will find the different python scripts to train the available models on the 2D incompressible steady-state RAND solutions over NACA airfoils proposed at the Geometrical and Topological Representation Learning Workshop at ICLR 2022. You can find the paper here.
+# ICLR_NACA_Dataset_V0
+In this repository, you will find the different python scripts to train the available models on the 2D incompressible steady-state RAND solutions over NACA airfoils proposed at the Geometrical and Topological Representation Learning Workshop at ICLR 2022. You can find the paper [here](https://openreview.net/forum?id=rqUUi4-kpeq&referrer=[the%20profile%20of%20Florent%20Bonnet](/profile?id=~Florent_Bonnet1)).
 
 ## Requirements
 * Python 3.9.12
@@ -15,7 +15,7 @@ To train a model, run main.py with the desired model architecture:
 python main.py GraphSAGE -s val -n 10
 ```
 
-Note that you must have the dataset in folder ```datasets/``` at the root of this repository, you can find the dataset here. You can change the parameters of the models and the training in the ```params.yaml``` file. You will find the different plots and scores at the root of the ```metrics``` folder.
+Note that you must have the dataset in folder ```datasets/``` at the root of this repository, you can find the dataset [here](https://data.isir.upmc.fr/extrality/). You can change the parameters of the models and the training in the ```params.yaml``` file. You will find the different plots and scores at the root of the ```metrics``` folder.
 
 ## Usage
 ```usage: main.py [-h] [-n NMODEL] [-w WEIGHT] [-s SET] model
