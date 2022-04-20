@@ -15,7 +15,7 @@ To train a model, run main.py with the desired model architecture:
 python main.py GraphSAGE -s val -n 10
 ```
 
-Note that you must have the dataset in folder ```datasets/``` at the root of this repository, you can find the dataset [here](https://data.isir.upmc.fr/extrality/). You can change the parameters of the models and the training in the ```params.yaml``` file. You will find the different plots and scores at the root of the ```metrics``` folder.
+Note that you must have the dataset in folder ```datasets/``` at the root of this repository, you can find the dataset [here](https://data.isir.upmc.fr/extrality/2D_RANS_NACA_Dataset.zip). You can change the parameters of the models and the training in the ```params.yaml``` file. You will find the different plots and scores at the root of the ```metrics``` folder.
 
 ## Usage
 ```usage: main.py [-h] [-n NMODEL] [-w WEIGHT] [-s SET] model
