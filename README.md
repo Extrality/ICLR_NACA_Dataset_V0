@@ -5,7 +5,7 @@ In this repository, you will find the different python scripts to train the avai
 * Python 3.9.12
 * PyTorch 1.11.0 with CUDA 11.3
 * PyTorch Geometric 2.0.4
-* PyVista 0.33.3
+* PyVista 0.34.1
 * Seaborn 0.11.2
 
 ## Training
