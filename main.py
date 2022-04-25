@@ -6,7 +6,7 @@ from dataset import Dataset
 import torch.nn as nn
 
 parser = argparse.ArgumentParser()
-parser.add_argument('model', help = 'The model you want to train, choose between GraphSAGE, GAT, PointNet, GKO, PointNet++, GUNet, MGKO', type = str)
+parser.add_argument('model', help = 'The model you want to train, choose between GraphSAGE, GAT, PointNet, GNO, PointNet++, GUNet, MGNO', type = str)
 parser.add_argument('-n', '--nmodel', help = 'Number of trained models for standard deviation estimation (default: 1)', default = 1, type = int)
 parser.add_argument('-w', '--weight', help = 'Weight in front of the surface loss (default: 1)', default = 1, type = float)
 parser.add_argument('-s', '--set', help = 'Set on which you want the scores and the global coefficients plot, choose between val and test (default: val)', default = 'val', type = str)
@@ -71,11 +71,11 @@ for i in range(args.nmodel):
         from models.PointNet import PointNet
         model = PointNet(hparams, encoder, decoder)
 
-    elif args.model == 'GKO':
-        from models.GKO import Conv, GKO
+    elif args.model == 'GNO':
+        from models.GNO import Conv, GNO
         kernel = MLP(hparams['kernel'], batch_norm = False)
         conv = Conv(hparams, kernel)
-        model = GKO(hparams, conv, encoder, decoder)
+        model = GNO(hparams, conv, encoder, decoder)
 
     elif args.model == 'PointNet++':
         from models.PointNetpp import PointNetpp
@@ -85,8 +85,8 @@ for i in range(args.nmodel):
         from models.GUNet import GUNet
         model = GUNet(hparams, encoder, decoder)
 
-    elif args.model == 'MGKO':
-        from models.MGKO import Conv, MGKO
+    elif args.model == 'MGNO':
+        from models.MGNO import Conv, MGNO
         list_kernel = nn.ModuleList()
         if hparams['local_nn'] is not None:
             list_local_nn = nn.ModuleList()
@@ -98,7 +98,7 @@ for i in range(args.nmodel):
                 list_conv.append(Conv(hparams, list_kernel[i], list_local_nn[i]))
             else:
                 list_conv.append(Conv(hparams, list_kernel[i], None))
-        model = MGKO(hparams, list_conv, encoder, decoder)
+        model = MGNO(hparams, list_conv, encoder, decoder)
     
 
     path = 'metrics/' # path where you want to save log and figures

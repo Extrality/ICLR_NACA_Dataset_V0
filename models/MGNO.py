@@ -94,9 +94,9 @@ def UpSample(id_sample, x, x_upsampled, base_x, batch):
 
     return y
 
-class MGKO(nn.Module):
+class MGNO(nn.Module):
     def __init__(self, hparams, list_conv, encoder, decoder):
-        super(MGKO, self).__init__()
+        super(MGNO, self).__init__()
         self.L = len(list_conv)
         self.dim_rep = hparams['dim_rep']
         self.in_channels = hparams['in_channels']

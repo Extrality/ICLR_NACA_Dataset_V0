@@ -18,9 +18,9 @@ class Conv(nng.MessagePassing):
         out = torch.matmul(conv, x_j.unsqueeze(-1)).squeeze(-1)
         return out
 
-class GKO(nn.Module):
+class GNO(nn.Module):
     def __init__(self, hparams, conv, encoder, decoder):
-        super(GKO, self).__init__()
+        super(GNO, self).__init__()
 
         self.dim_rep = hparams['dim_rep']
         self.in_channels = hparams['in_channels']
