@@ -21,7 +21,7 @@ Note that you must have the dataset in folder ```datasets/``` at the root of thi
 ```usage: main.py [-h] [-n NMODEL] [-w WEIGHT] [-s SET] model
 
 positional arguments:
-  model                 The model you want to train, chose between GraphSAGE, GAT, PointNet, GKO, PointNet++, GUNet, MGKO.
+  model                 The model you want to train, chose between GraphSAGE, GAT, PointNet, GNO, PointNet++, GUNet, MGNO.
 
 optional arguments:
   -h, --help            show this help message and exit
