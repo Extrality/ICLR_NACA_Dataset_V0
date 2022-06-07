@@ -1,5 +1,5 @@
 # ICLR_NACA_Dataset_V0
-In this repository, you will find the different python scripts to train the available models on the 2D incompressible steady-state RAND solutions over NACA airfoils proposed at the Geometrical and Topological Representation Learning Workshop at ICLR 2022. You can find the paper [here](https://openreview.net/forum?id=rqUUi4-kpeq).
+In this repository, you will find the different python scripts to train the available models on the 2D incompressible steady-state RANS solutions over NACA airfoils proposed at the Geometrical and Topological Representation Learning Workshop at ICLR 2022. You can find the paper [here](https://openreview.net/forum?id=rqUUi4-kpeq).
 
 ## Requirements
 * Python 3.9.12
